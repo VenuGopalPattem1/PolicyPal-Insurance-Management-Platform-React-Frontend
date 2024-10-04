@@ -1,0 +1,66 @@
+/* src/components/Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: url('https://source.unsplash.com/random/1600x900') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the entire container */
+}
+
+.card {
+    width: 100%;
+    max-width: 400px; /* Set a max width for the card */
+    border-radius: 15px; /* Rounded corners */
+    border: none; /* Remove border */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for a soft look */
+}
+
+.card-body {
+    padding: 30px; /* Padding inside the card */
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif; /* Change the font for better aesthetics */
+    color: #333; /* Dark text color */
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif; /* Change the font for better aesthetics */
+    color: #555; /* Slightly lighter text color */
+}
+
+.input-field {
+    border-radius: 25px; /* Round input fields */
+    border: 1px solid #007bff; /* Border color */
+}
+
+.input-field:focus {
+    border-color: #0056b3; /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Soft glow effect */
+}
+
+.btn-login {
+    border-radius: 25px; /* Round button edges */
+    padding: 10px; /* Padding for a better look */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+.forgot-password {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
