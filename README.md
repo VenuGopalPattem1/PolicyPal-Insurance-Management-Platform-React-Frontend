@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# PolicyPal - Insurance Management Application
+---------------------------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+- **Description:**  
+  PolicyPal is a health insurance management system where users can register and apply for available insurance plans.
 
-## Available Scripts
+- **Architecture:**  
+  Developed using microservices architecture, the application consists of different modules, each handling specific services to ensure scalability and maintainability.
 
-In the project directory, you can run:
+## Architecture Diagram
 
-### `npm start`
+```mermaid
+graph LR
+    subgraph Client Layer
+        A[React Application]
+    end
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    subgraph API Gateway
+        B[Spring Cloud API Gateway]
+    end
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    subgraph Service Discovery
+        C[Eureka Server]
+    end
 
-### `npm test`
+    subgraph Configuration Management
+        D[Config Server]
+    end
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    subgraph Monitoring
+        E[Admin Server]
+    end
 
-### `npm run build`
+    subgraph Authentication
+        F[Auth Server]
+    end
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    subgraph Microservices
+        G[Application Registration Module]
+        H[Data Collection Module]
+        I[Eligibility Determination Module]
+        J[Correspondence Module]
+        K[Benefit Issuance Module]
+        L[Reports Module]
+        M[Admin Module]
+    end
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    subgraph Database Layer
+        N[(MySQL Database)]
+    end
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    subgraph Supporting Tools
+        O[Swagger]
+        P[Postman]
+        Q[Java Mail Sender]
+        R[iText/OpenPDF]
+        S[Apache POI]
+        T[Spring Batch & Scheduling]
+    end
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    A --> B
+    B --> C
+    B --> F
+    B --> G
+    B --> H
+    B --> I
+    B --> J
+    B --> K
+    B --> L
+    B --> M
+    G --> N
+    H --> N
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+    C --> G
+    C --> H
+    C --> I
+    C --> J
+    C --> K
+    C --> L
+    C --> M
+    D --> G
+    D --> H
+    D --> I
+    D --> J
+    D --> K
+    D --> L
+    D --> M
+    E --> G
+    E --> H
+    E --> I
+    E --> J
+    E --> K
+    E --> L
+    E --> M
+    F --> B
+    G --> O
+    G --> P
+    J --> Q
+    J --> R
+    K --> S
+    K --> T
