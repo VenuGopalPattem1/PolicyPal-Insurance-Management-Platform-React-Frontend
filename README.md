@@ -10,7 +10,7 @@
 
 ## Architecture Diagram
 
-mermaid
+```mermaid
 graph TD
     subgraph Client Layer
         A[React Application]
