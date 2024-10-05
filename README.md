@@ -12,11 +12,11 @@
 
 ```mermaid
 graph TD
-    A[Client Layer] --> B[API Gateway]
-    B --> C[Eureka Server]
-    B --> D[Config Server]
-    B --> E[Admin Server]
-    B --> F[Auth Server]
+    A[Client Layer] -->|REST Calls| B[API Gateway]
+    B -->|Service Discovery| C[Eureka Server]
+    B -->|Config Management| D[Config Server]
+    B -->|Monitoring| E[Admin Server]
+    B -->|Authentication| F[Auth Server]
     
     C --> G[Application Registration Service]
     C --> H[Data Collection Service]
@@ -26,13 +26,13 @@ graph TD
     C --> L[Reports Service]
     C --> M[Admin Service]
 
-    G --> N[MySQL Database]
-    H --> N
-    I --> N
-    J --> N
-    K --> N
-    L --> N
-    M --> N
+    G -->|CRUD Operations| N[MySQL Database]
+    H -->|CRUD Operations| N
+    I -->|CRUD Operations| N
+    J -->|CRUD Operations| N
+    K -->|CRUD Operations| N
+    L -->|CRUD Operations| N
+    M -->|CRUD Operations| N
     
     subgraph "Support Tools"
         O[Swagger]
@@ -42,9 +42,8 @@ graph TD
         S[Apache POI]
     end
     
-    B --> O
-    B --> P
-    G --> Q
-    I --> R
-    K --> S
-
+    B -->|API Docs| O
+    B -->|API Testing| P
+    G -->|Email Notifications| Q
+    I -->|PDF Generation| R
+    K -->|Excel Generation| S
