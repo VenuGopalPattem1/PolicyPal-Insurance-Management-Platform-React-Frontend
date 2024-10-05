@@ -1,4 +1,4 @@
-# 🌟 PolicyPal Insurance Management UI
+#  🩺  PolicyPal Insurance Management UI
 
 ## Overview
 **PolicyPal Insurance Management UI** is the frontend application for the PolicyPal project, built on a **Spring Boot microservice architecture**. This application interacts with backend services to manage health insurance data efficiently, providing a smooth user experience through various features.
