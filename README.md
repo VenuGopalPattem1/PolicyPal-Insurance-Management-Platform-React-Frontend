@@ -1,3 +1,16 @@
+# PolicyPal - Insurance Management Application
+---------------------------------------------------------
+
+## Overview
+- **Description:**  
+  PolicyPal is a health insurance management system where users can register and apply for available insurance plans.
+
+- **Architecture:**  
+  Developed using microservices architecture, the application consists of different modules, each handling specific services to ensure scalability and maintainability.
+
+## Architecture Diagram
+
+mermaid
 graph TD
     subgraph Client Layer
         A[React Application]
