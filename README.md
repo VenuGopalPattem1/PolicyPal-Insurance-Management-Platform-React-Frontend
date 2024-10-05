@@ -11,7 +11,7 @@
 ## Architecture Diagram
 
 ```mermaid
-graph TD
+graph LR
     subgraph Client Layer
         A[React Application]
     end
