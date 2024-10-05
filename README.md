@@ -62,5 +62,5 @@ To run the PolicyPal frontend application locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/VenuGopalPattem1/PolicyPal-Insurance-SpringBoot-Backend.git
+   git clone https://github.com/VenuGopalPattem1/PolicyPal-Insurance-React-Frontend.git
 
